@@ -1,0 +1,37 @@
+{
+  "autofc2": {
+    "log_level": "info",
+    "debounce_time": 300,
+    "metrics": {
+      "host": "0.0.0.0",
+      "port": 9090,
+      "path": "/metrics"
+    }
+  },
+  "default_params": {
+    "quality": "3Mbps",
+    "latency": "mid",
+    "threads": 4,
+    "outtmpl": "%(channel_name)s %(_en_name)s/%(date)s %(title)s.%(ext)s",
+    "write_chat": false,
+    "write_info_json": false,
+    "write_thumbnail": false,
+    "wait_for_live": true,
+    "wait_for_quality_timeout": 15,
+    "wait_poll_interval": 10,
+    "cookies_file": null,
+    "remux": true,
+    "keep_intermediates": false,
+    "extract_audio": true,
+    "trust_env_proxy": false
+  },
+  "notifications": [
+    {
+      "url": "discord://{WebhookID}/{WebhookToken}",
+      "message": "%(channel_name)s is live!\nhttps://live.fc2.com/%(channel_id)s"
+    }
+  ],
+  "channels": {
+    "79049449": { "_en_name": "Sera Promisu" }
+  }
+}
